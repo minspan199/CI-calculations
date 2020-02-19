@@ -107,7 +107,7 @@ for kt = 1:in:N
     Psi((kt + in - 1)/in) = out(1,kt)*exp(-1i*n(kt)*Km*Space/2) + ...
         out(2,kt)*exp(1i*n(kt)*Km*x(kt)*Space/2);
 end
-plot(abs(Psi),'b*')
+plot(abs(Psi),'black*')
 set(gca,'FontSize', 14)
 set(gcf, 'Position', [00, 00, 400, 300])
 set(gca,'xtick',[0,N/4,N/2,N/4*3,N]);
