@@ -14,7 +14,7 @@ plot(d, ind3);
 plot(d, ind4);
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-L = 20;
+L = 1;
 M = 1000;
 ne = 1.85;
 z = -L/2:(L/(M - 1)):L/2;
@@ -34,8 +34,13 @@ figure;
 plot(z, eps1);
 hold on;
 plot(z, eps2);
+
 plot(z, eps3);
 plot(z, eps4);
 set(gca,'FontSize', 14)
 set(gcf, 'Position', [00, 00, 400, 300])
 
+f=fit(z',eps1','poly2')
+f=fit(z',eps2','poly2')
+f=fit(z',eps3','poly2')
+f=fit(z',eps4','poly2')
