@@ -1,7 +1,7 @@
 clc;clear all;close all
 
 global L ne
-N = 10000;
+N = 500;
 ne = 3.3;L = 1;k = 10*pi/L;h = L/N;x = -0.5*L:h:0.5*L;
 % k = 2*pi/L;
 Ksi = diag((2*ne*x/L).^2 + 2i*1*ne/k/L); 
@@ -14,6 +14,8 @@ Hmm = H0 - h*h*k*k*Ksi.*eye(N + 1);
 % Hmm(1,1) = real(Hmm(1,1)) +0.01i;Hmm(N+1,N+1) = real(Hmm(N+1,N+1))+0.01i;
 
 [a,b] = eig(Hmm);
+
+
 figure;
 subplot(2,1,1);
 plot(real(diag(b)),imag(diag(b)),'b*');
