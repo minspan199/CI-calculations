@@ -7,3 +7,24 @@ hold on
 plot(Data(:,1)+30, Data(:,3))
 plot(Data(:,1)+30, Data(:,4))
 plot(Data(:,1)+30, Data(:,5))
+set(gcf, 'Position', [00, 00, 400, 300]);
+xlim([30 530])
+legend('150nm', '200nm', '250nm', '300nm')
+xlabel('thickness of top SiO2 layer')
+ylabel('Re[neff]')
+set(gca, 'FontSize', 14);
+
+
+figure
+plot(Data(:,1)+30, imag(Data(:,2)))
+hold on
+plot(Data(:,1)+30, imag(Data(:,3)))
+plot(Data(:,1)+30, imag(Data(:,4)))
+plot(Data(:,1)+30, imag(Data(:,5)))
+set(gcf, 'Position', [00, 00, 400, 300]);
+xlim([30 530])
+legend('150nm', '200nm', '250nm', '300nm')
+xlabel('thickness of top SiO2 layer')
+ylabel('Im[neff]')
+set(gca, 'FontSize', 14);
+
