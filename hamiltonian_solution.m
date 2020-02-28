@@ -1,7 +1,7 @@
 clc;clear all;close all
 
 global L ne
-N = 500;
+N = 1000;
 ne = 3.3;L = 1;k = 10*pi/L;h = L/N;x = -0.5*L:h:0.5*L;
 % k = 2*pi/L;
 Ksi = diag((2*ne*x/L).^2 + 2i*1*ne/k/L); 
