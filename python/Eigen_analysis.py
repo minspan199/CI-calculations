@@ -58,26 +58,3 @@ plt.ylabel('Amplitudes')
 plt.xlabel('Site number')
 plt.xticks([1, Nd / 2 + 1, Nd + 1, Nd * 1.5 + 1, 2 * Nd + 1])
 plt.show()
-
-# H = diag([repmat([1i*g -1i*g],[1 Nd]) 1i*g]) +...
-#    diag(repmat([t1*exp(h) t2*exp(h)],[1 Nd]),1) +...
-#    diag(repmat([t1*exp(-h) t2*exp(-h)],[1 Nd]),-1)  % Assembling of Hamiltonian matrix
-# [V, A] = eig(H)
-# lam = diag(A)
-# [~, idx] = sort(real(lam))
-# lam1 = lam(idx)
-# figure
-# plot(real(lam1),'b*')
-# hold on
-# plot(imag(lam1),'r*')
-# set(gcf, 'Position', [00, 00, 350, 300])
-# axis([0 2*Nd + 2 -4 4])
-# set(gca,'FontSize', 14) % Font Size
-# figure
-# bar(V(:,17))
-# set(gcf, 'Position', [00, 00, 350, 300])
-# set(gca,'FontSize', 14) % Font Size
-# axis([0 2*Nd + 2 -1 1])
-
-# H = np.array([[1+1j,2+1j, 3+1j],[3+2j, 2+2j, 1+1j],[3+8j, 4+2j, 6-1j]])
-# [a, b] = tf.eig(H)
