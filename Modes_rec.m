@@ -1,4 +1,6 @@
-clc;clear all;close all
+clc
+clear all
+close all
 
 global L ne
 N = 10000;
