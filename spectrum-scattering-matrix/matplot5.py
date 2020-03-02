@@ -15,8 +15,12 @@ for ix, iy in np.ndindex(data.shape):
     data_inv[ix, iy] = math.log(abs(1 / data[ix, iy]))
 
 fig, axes = plt.subplots(nrows=1, ncols=1)
-axes.imshow(data_inv, origin='lower', interpolation='nearest', aspect='auto', extent=[0.01, 1.9, -0.35, 0.35])
-
+spect = axes.imshow(data_inv, origin='lower', interpolation='nearest', aspect='auto', extent=[0.01, 1.9, -0.35, 0.35],
+                    vmin=-4, vmax=7, cmap='jet')
+# Add minorticks on the colorbar to make it easy to read the
+# values off the colorbar.
+cbar = fig.colorbar(spect, ax=axes, extend='both')
+cbar.minorticks_on()
 plt.title('eigenmodes')
 plt.ylabel('Imaginary part')
 plt.xlabel('Wavenumber')
