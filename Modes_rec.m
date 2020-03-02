@@ -25,7 +25,6 @@ for kk = 1:1:N+1
     hold on; 
 end
 
-
 [c,d] = min(std(abs(a)));
 figure
 subplot(2,1,1);
