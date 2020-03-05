@@ -11,16 +11,17 @@ figure;plot(d*1e9,imag(perm))
 
 figure;
 yyaxis right;
-plot(d*1e9,abs(real(neff)));
+plot(d*1e9,abs(real(perm)));
 set(gcf, 'Position', [00, 00, 400, 300]);
-ylabel('Real index');
+ylabel('Real permittivity');
 xlabel('Waveguide width');
 yyaxis left;
 hold on;
-plot(d*1e9,imag(neff));
-ylabel('Imaginary index');
+plot(d*1e9,imag(perm));
+ylabel('Imaginary permittivity');
 xlabel('Waveguide width');
-legend(["Imaginary Index","Real Index"])
+legend(["Imaginary permittivity","Real permittivity"])
+title('PECVD 90nm SiN');
 
 k0 = 2*pi/1550e-5;
 L = 20e-6;

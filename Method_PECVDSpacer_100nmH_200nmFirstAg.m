@@ -7,23 +7,24 @@ Data = [9.60000000000000e-08 + 0.00000000000000i,0.0254548298925831 + 0.14699197
 d = Data(:,1);neff = (Data(:,2));perm = neff.^2;
 
 % figure
-% 
 % plot(d*1e9,real(perm));
 % figure
 % plot(d*1e9,imag(perm));
 
 figure;
 yyaxis right;
-plot(d*1e9,abs(real(neff)));
+plot(d*1e9,abs(real(perm)));
 set(gcf, 'Position', [00, 00, 400, 300]);
-ylabel('Real index');
+ylabel('Real permittivity');
 xlabel('Waveguide width');
 yyaxis left;
 hold on;
-plot(d*1e9,imag(neff));
-ylabel('Imaginary index');
+plot(d*1e9,imag(perm));
+ylabel('Imaginary permittivity');
 xlabel('Waveguide width');
-legend(["Imaginary Index","Real Index"])
+legend(["Imaginary permittivity","Real permittivity"])
+title('PECVD 100nm SiN');
+xlim([95 500])
 
 k0 = 2*pi/1550e-5;
 L = 20e-6;
