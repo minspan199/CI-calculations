@@ -63,7 +63,7 @@ Al_Z = [z -z]*1e6;
 Al_Z_h = Al_Z';
 % Al_Y = [d_Al-0.0e-6 -d_Al+0.0e-6]/2*1e6;Al_Z = [z -z]*1e6;
 % PumpSweep = unique(Lx_Al_Com)*1e9;
-SiO_Y = [d_Al + 100e-9 -d_Al - 100e-9]/2*1e6;
+SiO_Y = [d_Al + 200e-9 -d_Al - 200e-9]/2*1e6;
 SiO_Z = [z -z];
 
 
