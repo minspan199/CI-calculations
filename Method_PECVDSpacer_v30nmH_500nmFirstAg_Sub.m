@@ -26,7 +26,7 @@ xlim([130 500]);
 k0 = 2*pi/1550e-5;
 L = 20e-6;
 M = 300;
-ne = 1.8;
+ne = 2.6;
 z = -L/2:(L/(M - 1)):L/2;
 wz = 2*ne*z/L;
 permz = wz.^2;
@@ -39,9 +39,17 @@ for ind = 1:1:M
     eps(ind) = perm(inx); 
 end
 
-figure;yyaxis left;
-plot(z*1e6,real(eps));set(gcf, 'Position', [00, 00, 400, 300]);xlabel('x(\mum)');ylabel('Re[\epsilon]');yyaxis right
-plot(z*1e6,imag(eps));set(gcf, 'Position', [00, 00, 400, 300]);xlabel('x(\mum)');ylabel('Im[\epsilon]');
+figure;
+yyaxis left;
+plot(z*1e6,real(eps));
+set(gcf, 'Position', [00, 00, 400, 300]);
+xlabel('x(\mum)');
+ylabel('Re[\epsilon]');
+yyaxis right
+plot(z*1e6,imag(eps));
+set(gcf, 'Position', [00, 00, 400, 300]);
+xlabel('x(\mum)');
+ylabel('Im[\epsilon]');
 
 figure;
 plot(z*1e6,d_Al*1e9);
