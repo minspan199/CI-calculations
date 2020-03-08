@@ -19,7 +19,7 @@ ylabel('Imaginary permittivity');
 xlabel('Waveguide width');
 legend(["Imaginary permittivity","Real permittivity"]);
 title('PECVD 50nm SiN');
-xlim([150 500])
+xlim([150 400])
 
 k0 = 2*pi/1550e-5;
 L = 20e-6;
