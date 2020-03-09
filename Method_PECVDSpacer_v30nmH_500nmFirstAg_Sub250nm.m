@@ -22,6 +22,7 @@ xlabel('Waveguide width');
 legend(["Imaginary permittivity","Real permittivity"]);
 title('250nm InP Left');
 xlim([130 500]);
+% legend(["50nm","100nm","120nm","150nm","200nm","250nm"])
 
 k0 = 2*pi/1550e-5;
 L = 20e-6;
