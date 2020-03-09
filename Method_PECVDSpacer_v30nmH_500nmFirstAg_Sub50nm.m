@@ -20,7 +20,7 @@ plot(d*1e9,imag(perm));
 ylabel('Imaginary permittivity');
 xlabel('Waveguide width');
 legend(["Imaginary permittivity","Real permittivity"]);
-title('PECVD 30nm SiN');
+title('50nm InP Left');
 xlim([130 500]);
 
 k0 = 2*pi/1550e-5;
