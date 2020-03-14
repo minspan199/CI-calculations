@@ -19,7 +19,7 @@ xlabel('Waveguide width');
 legend(["Imaginary Index","Real Index"])
 
 k0 = 2*pi/1550e-5;
-L = 20e-6;
+L = 200e-6;
 M = 300;
 ne = 2.7;
 z = -L/2:(L/(M - 1)):L/2;
