@@ -11,11 +11,11 @@ plot(Cr50nmSiN50(:,1)*1e9,Cr50nmSiN50(:,2).*Cr50nmSiN50(:,2));
 plot(Ti50nmSiN50(:,1)*1e9,Ti50nmSiN50(:,2).*Ti50nmSiN50(:,2));
 plot(NoAd(:,1)*1e9,NoAd(:,2).*NoAd(:,2));
 box on;
-xlabel('InGaAsP waveguide width(nm)')
-ylabel('Re[\epsilon]')
+xlabel('InGaAsP waveguide width(nm)');
+ylabel('Re[\epsilon]');
 set(gca, 'FontSize', 14);
 set(gcf, 'Position', [00, 00, 400, 300]);
-legend(["Cr 20nm","Cr 50nm","Ti 50nm","No Adhesion Layer"],'FontSize',8)
+legend(["Cr 20nm","Cr 50nm","Ti 50nm","No Adhesion Layer"],'FontSize',8);
 
 figure;
 hold on;
@@ -24,10 +24,10 @@ plot(Cr50nmSiN50(:,1)*1e9,imag(Cr50nmSiN50(:,2).*Cr50nmSiN50(:,2)));
 plot(Ti50nmSiN50(:,1)*1e9,imag(Ti50nmSiN50(:,2).*Ti50nmSiN50(:,2)));
 plot(NoAd(:,1)*1e9,imag(NoAd(:,2).*NoAd(:,2)));
 box on;
-xlabel('InGaAsP waveguide width(nm)')
-ylabel('Im[\epsilon]')
+xlabel('InGaAsP waveguide width(nm)');
+ylabel('Im[\epsilon]');
 set(gca, 'FontSize', 14);
 set(gcf, 'Position', [00, 00, 400, 300]);
-legend(["Cr 20nm","Cr 50nm","Ti 50nm","No Adhesion Layer"],'FontSize',8)
+legend(["Cr 20nm","Cr 50nm","Ti 50nm","No Adhesion Layer"],'FontSize',8);
 
 
